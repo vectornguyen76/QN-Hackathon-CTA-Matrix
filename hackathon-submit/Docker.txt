@@ -1,0 +1,27 @@
+***Build docker
+docker build -t test-submit:v1 .
+
+***Login
+docker login
+
+***user
+vectornguyen76
+
+***password
+Vector070600
+
+***Add tag 
+docker tag test-submit:v1 vectornguyen76/test-cta-matrix:v1
+
+**Push to hub
+docker push vectornguyen76/test-cta-matrix:v1
+
+***Run docker
+example: docker run -it -p 54321:54321 --network="host" --add-host=host.docker.internal:host-gateway test-submit:v1
+sample: docker run test-submit:v1 
+
+***Save file rar
+docker save -o test-submit.rar test-submit
+
+***Remove image
+docker image rm --force test-submit:v1

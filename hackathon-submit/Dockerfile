@@ -3,8 +3,8 @@ FROM python:3.9.13
 
 # STEP 2,3: CREATE WORK DIR AND COPY FILE TO WORK DIR
 COPY . /cta_matrix
-WORKDIR /cta_matrix
 RUN cd cta_matrix 
+WORKDIR /cta_matrix
 
 # STEP 4,5,6: INSTALL NECESSARY PACKAGE
 RUN pip install --upgrade pip
