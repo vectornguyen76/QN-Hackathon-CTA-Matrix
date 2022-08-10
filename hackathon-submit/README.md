@@ -1,17 +1,25 @@
-# Build docker
+## Docker
+### Build docker
+```
 docker build -t vectornguyen76/cta-matrix .
-
-# Run container
+```
+### Run container
+```
 docker run --name cta-matrix -p 6000:8000 vectornguyen76/cta-matrix
-
-# Rerun container
+```
+### Rerun container
+```
 docker start cta-matrix
-
-# Push to hub
+```
+### Push to hub
+```
 docker push vectornguyen76/cta-matrix:latest
-
-# Save file rar
+```
+### Save file rar
+```
 docker save -o cta-matrix.rar vectornguyen76/cta-matrix:latest
-
-# Remove image
+```
+### Remove image
+```
 docker image rm --force vectornguyen76/cta-matrix:latest
+```
