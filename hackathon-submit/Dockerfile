@@ -16,7 +16,6 @@ RUN pip3 install --no-cache-dir -r requirements.txt
 RUN pip install gdown
 
 # STEP 7: Download file weight
-# RUN gdown "https://drive.google.com/uc?export=download&id=1VIplhJoaKPI08Qcdq6FhPk_dMvGOfDMp"
 RUN gdown "https://drive.google.com/uc?export=download&id=1-4TlJG_3auyI1aAKL3BTLYTaXLGOlCW2"
 
 # STEP 8: RUN COMMAND
