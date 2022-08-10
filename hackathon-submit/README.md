@@ -23,3 +23,8 @@ docker save -o cta-matrix.rar vectornguyen76/cta-matrix:latest
 ```
 docker image rm --force vectornguyen76/cta-matrix:latest
 ```
+
+## Postman
+<p align="center">
+  <img src="./results/test_postman.jpg" alt="animated" />
+</p>
