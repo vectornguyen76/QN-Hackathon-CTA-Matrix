@@ -1,5 +1,5 @@
 ***Build docker
-docker build -t test-submit:v1 .
+docker build -t cta-matrix:v1 .
 
 ***Login
 docker login
@@ -11,17 +11,20 @@ vectornguyen76
 Vector070600
 
 ***Add tag 
-docker tag test-submit:v1 vectornguyen76/test-cta-matrix:v1
+docker tag cta-matrix:v1 vectornguyen76/cta-matrix:v1
 
 **Push to hub
-docker push vectornguyen76/test-cta-matrix:v1
+docker push vectornguyen76/cta-matrix:v1
 
-***Run docker
-example: docker run -it -p 54321:54321 --network="host" --add-host=host.docker.internal:host-gateway test-submit:v1
-sample: docker run test-submit:v1 
+***Run container
+docker run --name cta-matrix -p 6000:8000 cta-matrix:v1 
+
+***Rerun container
+docker start cta-matrix
 
 ***Save file rar
-docker save -o test-submit.rar test-submit
+docker save -o cta-matrix.rar cta-matrix
 
 ***Remove image
-docker image rm --force test-submit:v1
+docker image rm --force cta-matrix:v1
+

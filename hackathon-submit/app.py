@@ -5,7 +5,7 @@ from model import ModelInference
 
 rdrsegmenter = VnCoreNLP("vncorenlp/VnCoreNLP-1.1.1.jar", annotators="wseg", max_heap_size='-Xmx500m') 
 tokenizer = AutoTokenizer.from_pretrained("vinai/phobert-base")
-model = ModelInference(tokenizer, rdrsegmenter, 'weights/model_softmax.pt')
+model = ModelInference(tokenizer, rdrsegmenter, 'model_softmax.pt')
 
 app = Flask(__name__)
 
