@@ -17,7 +17,7 @@ docker push vectornguyen76/cta-matrix:latest
 ```
 ### Save file rar
 ```
-docker save -o cta-matrix.rar vectornguyen76/cta-matrix:latest
+docker save -o challenge2_CTAMatrix.tar vectornguyen76/cta-matrix:latest
 ```
 ### Remove image
 ```
