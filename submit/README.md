@@ -15,6 +15,10 @@ docker start cta-matrix
 ```
 docker stop cta-matrix
 ```
+### Remove container
+```
+docker container rm cta-matrix
+```
 ### Push to hub
 ```
 docker push vectornguyen76/cta-matrix:latest
@@ -27,6 +31,7 @@ docker save -o challenge2_CTAMatrix.tar vectornguyen76/cta-matrix:latest
 ```
 docker image rm --force vectornguyen76/cta-matrix:latest
 ```
+
 
 ## Postman
 <p align="center">

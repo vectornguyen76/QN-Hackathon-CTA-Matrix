@@ -13,4 +13,6 @@ RUN apt-get update && \
 
 COPY . /cta_matrix
 
+RUN python3 test.py
+
 CMD ["python", "app.py"]
