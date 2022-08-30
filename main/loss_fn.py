@@ -6,7 +6,6 @@ import torch.nn as nn
 def loss_classifier(pred_classifier, labels_classifier):
 	return nn.BCELoss()(pred_classifier, labels_classifier)
 
-
 def loss_regressor(pred_regressor, labels_regressor):
 	mask = (labels_regressor != 0)
 	loss = ((pred_regressor - labels_regressor)**2)[mask].sum() / mask.sum()
