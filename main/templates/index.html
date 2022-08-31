@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Review Analytics</title>
+{% endblock %}
+
+<!-- Body -->
+{% block body %}
+<h1 class="main-title">Review Analytics</h1>
+
+<form action="/" method="post">
+    <div class="main">
+        <div class="input-group mb-3">
+            <input name="input_review" type="text" class="form-control" placeholder="Review" aria-label="Review" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button">Evaluate</button>
+            </div>
+          </div>
+    </div>
+</form>
+
+
+<table class="table">
+    <thead class="thead-dark"> 
+        <tr>
+            <th scope="col">Giải trí</th>
+            <th scope="col">Lưu trú</th>
+            <th scope="col">Nhà hàng</th>
+            <th scope="col">Ăn uống</th>
+            <th scope="col">Di chuyển</th>
+            <th scope="col">Mua sắm</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% if predict %}
+        <tr>
+            <td scope="row">{{predict.giai_tri}}</td>
+            <td>{{predict.luu_tru}}</td>
+            <td>{{predict.nha_hang}}</td>
+            <td>{{predict.an_uong}}</td>
+            <td>{{predict.di_chuyen}}</td>
+            <td>{{predict.mua_sam}}</td>
+        </tr>
+    {% endif %}
+    </tbody>
+    
+</table>
+
+<h3 class="output"></h3>
+{% endblock %}
