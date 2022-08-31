@@ -1,12 +1,12 @@
 # Quy Nhon AI Hackathon 2022 - Challenge 2: Review Analytics - Top 1 Solution
 ## Leader Board
 <p align="center">
-  <img src="../cap_results/final_leaderboard.png" alt="animated" />
+  <img src="/results/final_leaderboard.png" alt="animated" />
 </p>
 
 ## Demo 
 <p align="center">
-  <img src="../cap_results/demo_ui.png" alt="animated" />
+  <img src="/results/demo_ui.png" alt="animated" />
 </p>
 
 ## Datasets description
