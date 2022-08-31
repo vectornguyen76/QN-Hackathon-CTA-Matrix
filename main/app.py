@@ -16,19 +16,14 @@ model = ModelInference(tokenizer, rdrsegmenter, 'weights/model_softmax_v4.pt')
 @app.route('/', methods=['GET', 'POST'])
 def test():
     if request.method == 'POST':
-
         RATING_ASPECTS = ["giai_tri", "luu_tru", "nha_hang", "an_uong", "di_chuyen", "mua_sam"]
+        
+        # Get review from input
         review_sentence = request.form['input_review']
 
+        # Predict
         predict_results = model.predict(review_sentence)
 
-        output = {
-            "review": review_sentence,
-            "results": {}
-        }
-        for count, r in enumerate(RATING_ASPECTS):
-            output["results"][r] = int(predict_results[count])
-        
         results = dict()
         for i, aspect in enumerate(RATING_ASPECTS):
             results.update({aspect : predict_results[i]})
