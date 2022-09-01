@@ -139,7 +139,7 @@ for epoch in range(num_epochs):
     
     if final_score > best_score:
         best_score = final_score
-        torch.save(model.state_dict(), "weights/model_softmax_vv1.pt")
+        torch.save(model.state_dict(), "weights/model.pt")
         
     print("Test Loss:", val_loss.compute(), "Loss Classifier:", val_loss_classifier.compute(), "Loss Regressor:", val_loss_regressor.compute())
     print("Acc", val_acc.compute())
