@@ -1,8 +1,5 @@
-import torch
-from transformers import AutoModel, AutoTokenizer
-from vncorenlp import VnCoreNLP
-import re
 import numpy as np
+import re
 
 def strip_emoji(text):
 	RE_EMOJI = re.compile(u'([\U00002600-\U000027BF])|([\U0001f300-\U0001f64F])|([\U0001f680-\U0001f6FF])')

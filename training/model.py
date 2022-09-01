@@ -1,11 +1,11 @@
+from transformers import AutoModel, AutoConfig, AutoTokenizer
+from vncorenlp import VnCoreNLP
 import torch.nn as nn
+import numpy as np
 import torch
-from transformers import AutoModel, AutoConfig
+
 from preprocessing import Preprocess
 from utils import pred_to_label
-from transformers import AutoModel, AutoTokenizer
-from vncorenlp import VnCoreNLP
-import numpy as np
 
 class ModelInference(nn.Module):
 	def __init__(self, tokenizer, rdrsegmenter, model_path, checkpoint="vinai/phobert-base", device="cpu"):
@@ -314,10 +314,13 @@ class ModelEnsemble(nn.Module):
 		return outputs.tolist()
   
 
-if __name__ == "__main__":
-	rdrsegmenter = VnCoreNLP("vncorenlp/VnCoreNLP-1.1.1.jar", annotators="wseg", max_heap_size='-Xmx500m') 
-	tokenizer = AutoTokenizer.from_pretrained("vinai/phobert-base")
+def test():
+    rdrsegmenter = VnCoreNLP("vncorenlp/VnCoreNLP-1.1.1.jar", annotators="wseg", max_heap_size='-Xmx500m') 
+    tokenizer = AutoTokenizer.from_pretrained("vinai/phobert-base")
 
-	model = ModelInference(tokenizer, rdrsegmenter, 'weights/model_softmax_v4.pt')
-	# model = ModelEnsemble(tokenizer, rdrsegmenter, 'weights/model_softmax_v2_submit.pt', 'weights/model_regress_v2_submit.pt')
-	print(model.predict("Các món ăn của nhà hàng rất dỡ mà còn mắc nữa, thái độ nhân viên rất tệ"))
+    model = ModelInference(tokenizer, rdrsegmenter, 'weights/model_softmax_v4.pt')
+    # model = ModelEnsemble(tokenizer, rdrsegmenter, 'weights/model_softmax_v2_submit.pt', 'weights/model_regress_v2_submit.pt')
+    print(model.predict("Các món ăn của nhà hàng rất dỡ mà còn mắc nữa, thái độ nhân viên rất tệ"))
+
+if __name__ == "__main__":
+	test()

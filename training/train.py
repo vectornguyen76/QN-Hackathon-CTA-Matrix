@@ -1,14 +1,10 @@
-from transformers import DataCollatorWithPadding
-from transformers import AutoModel, AutoTokenizer
-from transformers import AdamW, get_scheduler
+from transformers import AutoTokenizer, DataCollatorWithPadding, AdamW, get_scheduler
 from torch.utils.data import DataLoader
 from vncorenlp import VnCoreNLP
 from tqdm.auto import tqdm
 import numpy as np
 import torch
 import random
-import imp
-import re
 
 from datasets import load_dataset
 from preprocessing import Preprocess
@@ -100,7 +96,7 @@ for epoch in range(num_epochs):
     print("Train Loss:", train_loss)
     
     # Evaluate
-    model.eval()
+    # model.eval()
     val_loss = ScalarMetric()
     val_loss_classifier = ScalarMetric()
     val_loss_regressor = ScalarMetric()
