@@ -2,3 +2,4 @@ weights/model_softmax_v4.pt
 venv
 challenge2_CTAMatrix.tar
 __pycache__
+*.ipynb

@@ -32,8 +32,7 @@ docker save -o challenge2_CTAMatrix.tar vectornguyen76/cta-matrix:latest
 docker image rm --force vectornguyen76/cta-matrix:latest
 ```
 
-
 ## Postman
 <p align="center">
-  <img src="../cap_results/test_postman.jpg" alt="animated" />
+  <img src="../results/test_postman.jpg" alt="animated" />
 </p>
