@@ -3,3 +3,5 @@ datasets/data_relabel
 tool_crawl/*.ipynb
 training/*.ipynb
 training/__pycache__
+main/__pycache__
+main/weights
