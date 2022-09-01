@@ -1,4 +1,8 @@
 # Quy Nhon AI Hackathon 2022 - Challenge 2: Review Analytics - Top 1 Solution
+## Members
+1. Lê Tự Quốc Thiện
+2. Nguyễn Văn Phước
+
 ## Leader Board
 <p align="center">
   <img src="/results/final_leaderboard.png" alt="animated" />

@@ -100,6 +100,7 @@ for epoch in range(num_epochs):
     print("Train Loss:", train_loss)
     
     # Evaluate
+    model.eval()
     val_loss = ScalarMetric()
     val_loss_classifier = ScalarMetric()
     val_loss_regressor = ScalarMetric()

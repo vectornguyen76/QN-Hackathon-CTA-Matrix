@@ -44,8 +44,4 @@ def pred_to_label(outputs_classifier, outputs_regressor):
 	result = np.zeros((outputs_classifier.shape[0], 6))
 	mask = (outputs_classifier >= 0.5)
 	result[mask] = outputs_regressor[mask]
-	
-	# Convert to list
-	result = list(result[0].astype(np.int32))
- 
 	return result
