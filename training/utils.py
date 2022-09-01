@@ -39,7 +39,7 @@ def pred_to_label(outputs_classifier, outputs_regressor):
 		outputs_regressor (numpy.array): Output regressor layer
 
 	Returns:
-		list: predicted label
+		predicted label
 	"""
 	result = np.zeros((outputs_classifier.shape[0], 6))
 	mask = (outputs_classifier >= 0.5)
