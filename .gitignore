@@ -4,6 +4,6 @@ datasets/data_error
 tool_crawl/*.ipynb
 training/*.ipynb
 training/__pycache__
-main/__pycache__
-main/weights/model.pt
+deploy/__pycache__
+deploy/weights/model.pt
 training/weights/model.pt
