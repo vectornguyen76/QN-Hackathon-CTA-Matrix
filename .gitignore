@@ -1,5 +1,6 @@
 test
 datasets/data_relabel
+datasets/data_error
 tool_crawl/*.ipynb
 training/*.ipynb
 training/__pycache__

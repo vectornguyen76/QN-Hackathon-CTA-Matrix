@@ -24,3 +24,8 @@ Output: Đánh giá review trên các khía cạnh:
 - Dịch vụ di chuyển
 - Dịch vụ mua sắm
 
+## Technology
+- PhoBERT
+- Emsemble
+- Crawl, label data
+
