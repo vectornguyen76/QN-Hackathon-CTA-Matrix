@@ -31,7 +31,7 @@ torch.backends.cudnn.deterministic = True
 rdrsegmenter = VnCoreNLP("vncorenlp/VnCoreNLP-1.1.1.jar", annotators="wseg", max_heap_size='-Xmx500m') 
 
 # Tokenizer
-tokenizer = AutoTokenizer.from_pretrained("vinai/phobert-base", local_files_only=True)
+tokenizer = AutoTokenizer.from_pretrained("vinai/phobert-base")
 
 # Load datasets
 data_files = {'train': "../datasets/data_training/train_datasets.csv", 
