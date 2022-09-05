@@ -26,6 +26,6 @@ Output: Đánh giá review trên các khía cạnh:
 
 ## Technology
 - PhoBERT
-- Emsemble
+- Ensemble
 - Crawl, label data
 
