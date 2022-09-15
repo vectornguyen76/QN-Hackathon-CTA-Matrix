@@ -5,7 +5,7 @@ docker build -t vectornguyen76/cta-matrix .
 ```
 ### Run container
 ```
-docker run --name cta-matrix -p 6000:8000 vectornguyen76/cta-matrix
+docker run --name cta-matrix -p 5000:5000 vectornguyen76/cta-matrix
 ```
 ### Rerun container
 ```
