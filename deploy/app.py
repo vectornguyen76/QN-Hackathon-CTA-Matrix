@@ -28,7 +28,7 @@ def test():
 
         results = dict()
         for i, aspect in enumerate(RATING_ASPECTS):
-            results.update({aspect : predict_results[i]})
+            results.update({aspect : str(predict_results[i]) + " ⭐"})
 
         return render_template("index.html", predict = results)
     
